@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orfeu Discos</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
     <header>
-        <h1>Orfeu Discos</h1> 
-        <p id="cabecinhas">Entrar</p>
-        <p id="cabecinhas">Sobre Nós</p>
-    </header> <hr>
+        <h1>Orfeu Discos</h1>
+        <nav>
+            <p class="cabecinha">Entrar</p>
+            <p class="cabecinha">Sobre nós</p>
+        </nav>
+    </header>
+    <hr>
     <main>
-        <img> <!-- Vou colocar alguma imagem aqui representando a loja-->
-        <h3>Bem vindo à nossa loja de discos!</h3>
-        <p>Somos uma loja de discos bláblablábláblablablablá.</p>
-        <p>Para começar, cadastre-se ou entre com sua conta.</p>
-        <button id="botão-1">Cadastro</button>
-        <button id="botão-2">Login</button>
-       </main>
-    
+        <img
+            class="hero-imagem" src="" alt="">
+
+        <section class="texto">
+            <h2>Bem-vindo à Orfeu Discos</h2>
+            <p>
+                Descubra uma seleção cuidadosamente escolhida de LPs, compactos e
+                edições especiais de artistas nacionais e internacionais.
+            </p>
+
+            <p>
+                Crie sua conta para acompanhar pedidos, salvar seus discos favoritos
+                e explorar nosso catálogo completo.
+            </p>
+
+            <div class="botoes">
+                <button id="botao-1">Cadastro</button>
+                <button id="botao-2">Login</button>
+            </div>
+
+        </section>
+
+    </main>
+
 </body>
+
 </html>
