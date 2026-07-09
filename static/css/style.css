@@ -63,17 +63,28 @@ header {
     font-family: "Neue Montreal";
     font-weight: 500;
     display: flex;
+    align-items: center;
 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 #botão-1 {
     font-family: "Neue Montreal";
     background-color: var(--preto);
-    color: var((--bege))
+    color: var(--bege);
+    width: 80px;
+    height: 40px;
 }
 
 #botão-2 {
     font-family: "Neue Montreal";
     background-color: var(--laranja);
-    color: var((--bege))
+    color: var(--bege);
+    width: 80px;
+    height: 40px;
 }
