@@ -41,3 +41,39 @@
     font-style: normal;
 }
 
+:root {
+    --preto: #27241F;
+    --bege: #E3DFDC;
+    --laranja: #DF5D32;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bege);
+    color: var(--preto);
+    font-family: "Neue Montreal";
+}
+
+header {
+    font-family: "Neue Montreal";
+    font-weight: 500;
+    display: flex;
+
+}
+
+#botão-1 {
+    font-family: "Neue Montreal";
+    background-color: var(--preto);
+    color: var((--bege))
+}
+
+#botão-2 {
+    font-family: "Neue Montreal";
+    background-color: var(--laranja);
+    color: var((--bege))
+}
