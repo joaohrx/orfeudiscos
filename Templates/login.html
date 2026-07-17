@@ -1,11 +1,49 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Login - Orfeu Discos{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <form class="login" method="POST" action="{{ url_for('login') }}">
+
+        <h1>ENTRAR</h1>
+
+        <p class="texto">
+            Entre na sua conta e continue aproveitando o melhor da música.
+        </p>
+
+        <label>E-mail</label>
+        <div class="campos">
+            <input type="email" name="email" placeholder="Digite seu e-mail">
+        </div>
+
+        <label>Senha</label>
+        <div class="campos">
+            <input type="password" name="senha" placeholder="Digite sua senha">
+        </div>
+
+        <button type="submit">
+            Entrar
+        </button>
+
+        <div class="linha">
+            <span>OU</span>
+        </div>
+
+        <a href="{{ url_for('cadastro') }}">
+            <button type="button" id="botao-2">
+                Criar uma conta
+            </button>
+        </a>
+
+    </form>
+
+</div>
+
+{% endblock %}
