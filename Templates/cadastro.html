@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}">
+{% extends "base.html" %}
 
-</head>
-<body>
+{% block title %}Cadastro - Orfeu Discos{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}">
+{% endblock %}
+
+{% block content %}
 
 <div class="container">
 
-    <form class="cadastro" method="POST" action="{{url_for('cadastro')}}">
+    <form class="cadastro" method="POST" action="{{ url_for('cadastro') }}">
 
         <h1>CRIAR CONTA</h1>
+
         <p class="texto">
             Junte-se à nossa loja e viva sua paixão pela música.
         </p>
@@ -28,19 +27,18 @@
         <label>E-mail</label>
         <div class="campos">
             <span class="material-symbols-outlined">mail</span>
-            <input type="email"  name="email" placeholder="Digite seu e-mail">
+            <input type="email" name="email" placeholder="Digite seu e-mail">
         </div>
 
         <label>Senha</label>
         <div class="campos">
             <span class="material-symbols-outlined">lock</span>
-            <input type="password"  name="senha" placeholder="Crie uma senha">
+            <input type="password" name="senha" placeholder="Crie uma senha">
             <span class="material-symbols-outlined">visibility</span>
         </div>
 
-        <button>
+        <button type="submit">
             <span class="material-symbols-outlined">album</span>
-        
             Criar Minha Conta
         </button>
 
@@ -48,13 +46,14 @@
             <span>OU</span>
         </div>
 
-        <a href="{{url_for('login')}}" class="login">
-            <button id="botao-2">Já tenho uma conta</button>
+        <a href="{{ url_for('login') }}">
+            <button type="button" id="botao-2">
+                Já tenho uma conta
+            </button>
         </a>
 
     </form>
 
 </div>
 
-</body>
-</html>
+{% endblock %}

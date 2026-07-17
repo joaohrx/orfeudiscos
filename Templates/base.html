@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Orfeu Discos{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+    <header>
+        <h1>Orfeu Discos</h1>
+        <nav>
+            <a href="{{ url_for('login') }}">
+                <p class="cabecinha">Entrar</p>
+            </a>
+            <p class="cabecinha">Sobre nós</p>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        {% block content %}
+        <img class="hero-imagem" src="" alt="">
+
+        <section class="texto">
+            <h2>Bem-vindo à Orfeu Discos</h2>
+
+            <p>
+                Descubra uma seleção cuidadosamente escolhida de LPs, compactos e
+                edições especiais de artistas nacionais e internacionais.
+            </p>
+
+            <p>
+                Crie sua conta para acompanhar pedidos, salvar seus discos favoritos
+                e explorar nosso catálogo completo.
+            </p>
+
+            <div class="botoes">
+                <a href="{{ url_for('cadastro') }}">
+                    <button id="botao-1">Cadastro</button>
+                </a>
+
+                <a href="{{ url_for('login') }}">
+                    <button id="botao-2">Login</button>
+                </a>
+            </div>
+        </section>
+        {% endblock %}
+    </main>
+
+</body>
+
+</html>
