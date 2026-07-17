@@ -119,6 +119,16 @@ main {
     line-height: 1.1;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
 .texto p {
     font-size: 1.1rem;
     line-height: 1.6;
