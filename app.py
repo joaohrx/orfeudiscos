@@ -71,7 +71,7 @@ def login():
 
         if usuario and check_password_hash(usuario.senha, senha):
             login_user(usuario)
-            return redirect(url_for("index"))
+            return redirect(url_for("discos"))
 
         flash("E-mail ou senha inválidos")
 
@@ -84,6 +84,11 @@ def logout():
     logout_user()
     return redirect(url_for("login"))
 
+
+@app.route("/discos")
+@login_required
+def discos():
+    return render_template("discos.html", usuario=current_user)
 
 @app.route("/perfil")
 @login_required
