@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/disco.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<img src="{{ url_for('static', filename='img/' + disco.imagem) }}" alt="{{ disco.nome }}">
+
+<div class="infos">
+
+    <h1>{{ disco.nome }}</h1>
+
+    <p>{{ disco.descricao }}</p>
+
+    <div class="preco">
+        R$ {{ disco.preco }}
+    </div>
+
+    <a href="{{ url_for('comprar', id=disco.id) }}">
+        <button>Comprar</button>
+    </a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+main {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.infos h1 {
+    font-size: 2.8rem;
+}
+
+.infos p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.preco {
+    color: var(--laranja);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+button {
+    width: fit-content;
+    background: var(--laranja);
+    color: white;
+    padding: 14px 35px;
+}
+
+button:hover {
+    opacity: .9;
+}

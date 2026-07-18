@@ -1,0 +1,42 @@
+main {
+    display: block;
+}
+
+.perfil {
+    background: white;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+    margin-bottom: 40px;
+}
+
+.perfil h1 {
+    margin-bottom: 20px;
+}
+
+.perfil p {
+    margin: 8px 0;
+    font-size: 1.05rem;
+}
+
+.compras h2 {
+    margin-bottom: 20px;
+}
+
+.compra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: white;
+    border-radius: 10px;
+    padding: 18px 25px;
+    margin-bottom: 15px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.06);
+}
+
+.compra span:last-child {
+    color: var(--laranja);
+    font-weight: bold;
+}

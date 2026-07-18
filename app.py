@@ -12,6 +12,7 @@ from database import db
 from banco import create
 from models.user import Usuario
 from models.disk import Disco
+from models.pedido import Pedido
 
 app = Flask(__name__)
 
@@ -88,12 +89,54 @@ def logout():
 @app.route("/discos")
 @login_required
 def discos():
-    return render_template("discos.html", usuario=current_user)
+    discos = Disco.query.all()
+    return render_template(
+        "discos.html",
+        discos=discos
+    )
+
+
+@app.route("/disco/<int:id>")
+@login_required
+def disco(id):
+    disco = Disco.query.get_or_404(id)
+    return render_template(
+        "disco.html",
+        disco=disco
+    )
+
+@app.route("/comprar/<int:id>")
+@login_required
+def comprar(id):
+
+    disco = Disco.query.get_or_404(id)
+
+    pedido = Pedido(
+        usuario_id=current_user.id,
+        disco_id=disco.id,
+        quantidade=1
+    )
+
+    db.session.add(pedido)
+    db.session.commit()
+
+    flash("Compra realizada com sucesso!")
+
+    return redirect(url_for("perfil"))
 
 @app.route("/perfil")
 @login_required
 def perfil():
-    return render_template("perfil.html", usuario=current_user)
+
+    pedidos = Pedido.query.filter_by(
+        usuario_id=current_user.id
+    ).all()
+
+    return render_template(
+        "perfil.html",
+        usuario=current_user,
+        pedidos=pedidos
+    )
 
 
 if __name__ == "__main__":

@@ -1,4 +1,64 @@
 main {
-    justify-content: flex-start;
-    margin-left: -1px;
+    display: block;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    margin: 15px;
+}
+
+.card p {
+    margin: 0 15px 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.card h3 {
+    margin: 0 15px;
+    color: var(--laranja);
+    font-size: 1.4rem;
+}
+
+.card a {
+    display: block;
+    margin: 20px 15px;
+    padding: 12px;
+    text-align: center;
+    background: var(--laranja);
+    color: white;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.card a:hover {
+    opacity: .9;
 }

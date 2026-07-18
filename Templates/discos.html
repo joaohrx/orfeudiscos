@@ -4,7 +4,36 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/discos.css') }}">
 {% endblock %}
 
-
 {% block content %}
-<h1>Discos à venda:</h1>
+
+<h1>Catálogo</h1>
+
+<div class="catalogo">
+
+{% for disco in discos %}
+
+<div class="card">
+
+    <img
+        src="{{ url_for('static', filename='img/' + disco.imagem) }}"
+        alt="{{ disco.nome }}"
+        width="220"
+    >
+
+    <h2>{{ disco.nome }}</h2>
+
+    <p>{{ disco.descricao }}</p>
+
+    <h3>R$ {{ disco.preco }}</h3>
+
+    <a href="{{ url_for('disco', id=disco.id) }}">
+        Ver detalhes
+    </a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
 {% endblock %}
