@@ -15,7 +15,7 @@ from models.disk import Disco
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "sua_chave_secreta"
+app.config["SECRET_KEY"] = "surpresa"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///orfeudiscos_database.db"
 
 db.init_app(app)
