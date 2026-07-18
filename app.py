@@ -11,6 +11,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from database import db
 from banco import create
 from models.user import Usuario
+from models.disk import Disco
 
 app = Flask(__name__)
 
