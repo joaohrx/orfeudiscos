@@ -12,7 +12,13 @@
 
 <body>
     <header>
-        <h1>Orfeu Discos</h1>
+        <h1>
+    {% if current_user.is_authenticated %}
+        <a href="{{ url_for('discos') }}">Orfeu Discos</a>
+    {% else %}
+        <a href="{{ url_for('index') }}">Orfeu Discos</a>
+    {% endif %}
+</h1>
 <nav>
     {% if current_user.is_authenticated %}
         <a href="{{ url_for('logout') }}">

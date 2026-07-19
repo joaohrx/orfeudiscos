@@ -38,6 +38,12 @@ def create(app):
                     descricao="Obra-prima do Pink Floyd.",
                     imagem="dsotm.jpg"
                 ),
+                Disco(
+                    nome="In Rainbows",
+                    preco=280.90,
+                    descricao="Álbum de Radiohead lançado em 2008.",
+                    imagem="inrainbows.jpg"
+                ),
             ]
 
             db.session.add_all(discos)

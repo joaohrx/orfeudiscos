@@ -1,10 +1,11 @@
 main {
     display: block;
+    padding-top: 40px;
 }
 
-h1 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
+.titulo-catalogo {
+    margin: 0 0 40px;
+    font-size: 2.3rem;
 }
 
 .catalogo {
